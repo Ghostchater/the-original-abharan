@@ -27,7 +27,30 @@ body{
 }
 
 /* Intro shimmer overlay */
+/* Intro shimmer overlay */
+.intro{
+  position:fixed;inset:0;background:rgba(0,0,0,.85);display:grid;place-items:center;z-index:3;
+  animation: introFadeOut 1.8s ease 2.3s forwards;
+  height:calc(var(--vh, 1vh) * 100); /* mobile 100vh fix */
+}
+.intro-logo{
+  width:140px;height:140px;border-radius:32px;position:relative;overflow:hidden;
+  background: linear-gradient(135deg, var(--gold2), var(--gold1));
+  transform: scale(.9);opacity:0;
+  animation: logoPop .9s cubic-bezier(.2,.9,.2,1) .3s forwards;
+  box-shadow: inset 0 1px 14px rgba(255,255,255,.5), 0 18px 44px rgba(0,0,0,.55);
+}
+.intro-logo img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply}
+.intro .shimmer{
+  position:absolute;inset:-40% -60% auto auto;transform:rotate(25deg);
+  width:60%;height:200%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.9) 45%, transparent 70%);
+  animation: sweep 1.6s ease-in-out 1s both;
+}
 
+@keyframes logoPop{0%{transform:scale(.9);opacity:0}55%{transform:scale(1.08);opacity:1}100%{transform:scale(1)}}
+@keyframes introFadeOut{to{opacity:0;visibility:hidden}}
+@keyframes sweep{from{translate: -180% 0} to{translate: 180% 0}}
 
 /* Sparkle field */
 /* Star Dust field – mobile visible, subtle motion */
