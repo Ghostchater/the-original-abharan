@@ -77,7 +77,7 @@
 
 // Popup message for unavailable socials
 document.addEventListener("DOMContentLoaded", () => {
-  const unavailable = document.querySelectorAll(".badge.fb, .badge.ig");
+  const unavailable = document.querySelectorAll(".badge.fb");
   const note = document.createElement("div");
   note.className = "unavailable-note";
   note.textContent = "Our Facebook pages are under legal review. They will be live soon.";
