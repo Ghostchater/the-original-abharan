@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const unavailable = document.querySelectorAll(".badge.fb, .badge.ig");
   const note = document.createElement("div");
   note.className = "unavailable-note";
-  note.textContent = "Our Facebook and Instagram pages are under legal review. They will be live soon.";
+  note.textContent = "Our Facebook pages are under legal review. They will be live soon.";
   document.body.appendChild(note);
 
   unavailable.forEach(btn => {
