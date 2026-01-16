@@ -75,19 +75,6 @@
   tick();
 })();
 
-// Popup message for unavailable socials
-document.addEventListener("DOMContentLoaded", () => {
-  const unavailable = document.querySelectorAll(".badge.fb");
-  const note = document.createElement("div");
-  note.className = "unavailable-note";
-  note.textContent = "Our Facebook pages are under legal review. They will be live soon.";
-  document.body.appendChild(note);
-
-  unavailable.forEach(btn => {
-    btn.addEventListener("click", e => {
-      e.preventDefault();
-      note.style.display = "block";
-      setTimeout(() => { note.style.display = "none"; }, 3200);
     });
   });
 });
